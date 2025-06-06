@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Carrito de Compras</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='carrito.css') }}">
+</head>
+<body>
+<!-- ...existing code... -->
+<main class="carrito-container">
+    <h1>Tu Carrito de Compras</h1>
+    <div id="carrito-items"></div>
+    <div class="total">
+        <p>Total: <span id="total-precio">$0.00 MXN</span></p>
+    </div>
+
+    <!-- Formulario de dirección y pago -->
+    <form id="form-compra" class="form-compra">
+        <h2>Datos de Envío</h2>
+        <label>
+            Nombre completo:
+            <input type="text" name="nombre" required>
+        </label>
+        <label>
+            Dirección:
+            <input type="text" name="direccion" required>
+        </label>
+        <label>
+            Teléfono:
+            <input type="tel" name="telefono" required>
+        </label>
+        <h2>Forma de Pago</h2>
+        <select name="pago" required>
+            <option value="">Selecciona una opción</option>
+            <option value="tarjeta">Tarjeta de crédito/débito</option>
+            <option value="oxxo">OXXO</option>
+            <option value="transferencia">Transferencia bancaria</option>
+            <option value="paypal">PayPal</option>
+        </select>
+    </form>
+
+    <button onclick="finalizarCompra()">Finalizar Compra</button>
+    <a href="{{ url_for('home') }}" class="btn-seguir">Seguir Comprando</a>
+</main>
+<!-- ...existing code... -->
+    <!-- Notificación tipo toast -->
+    <div id="toast" class="toast"></div>
+
+    <script src="{{ url_for('static', filename='js/carrito.js') }}"></script>
+</body>
+</html>

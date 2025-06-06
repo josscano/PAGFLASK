@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Productos - Style & Essence</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='sabor.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Catálogo de Productos</h1>
+        <nav class="categorias-nav">
+            <button id="menu-toggle" class="menu-hamburguesa">&#9776;</button>
+            <div id="menu-categorias" class="categorias">
+                <a href="#ropa">Ropa</a>
+                <a href="#gorras">Gorras</a>
+                <a href="#perfumes">Perfumes</a>
+                <a href="#tenis">Tenis</a>
+                <a href="{{ url_for('ver_carrito') }}">Ver carrito</a>
+                <a href="{{ url_for('home') }}">Regresar</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="galeria-container">
+        <section id="ropa">
+            <h2>Ropa</h2>
+            <div class="galeria-grid">
+                <div class="img-card">
+                    <img src="{{ url_for('static', filename='images/ropa (1).webp') }}" alt="Ropa 1">
+                    <div class="info-producto">
+                        <p class="descripcion">Ropa edición 1</p>
+                        <p class="precio">$350 MXN</p>
+                        <button class="btn-agregar" data-producto="Ropa edición 1" data-precio="350" data-imagen="{{ url_for('static', filename='images/ropa (1).webp') }}">Agregar al carrito</button>
+                    </div>
+                </div>
+                <div class="img-card">
+                    <img src="{{ url_for('static', filename='images/ropa (2).webp') }}" alt="Ropa 2">
+                    <div class="info-producto">
+                        <p class="descripcion">Ropa edición 2</p>
+                        <p class="precio">$360 MXN</p>
+                        <button class="btn-agregar" data-producto="Ropa edición 2" data-precio="360" data-imagen="{{ url_for('static', filename='images/ropa (2).webp') }}">Agregar al carrito</button>
+                    </div>
+                </div>
+                <div class="img-card">
+                    <img src="{{ url_for('static', filename='images/ropa (3).webp') }}" alt="Ropa 3">
+                    <div class="info-producto">
+                        <p class="descripcion">Ropa edición 3</p>
+                        <p class="precio">$370 MXN</p>
+                        <button class="btn-agregar" data-producto="Ropa edición 3" data-precio="370" data-imagen="{{ url_for('static', filename='images/ropa (3).webp') }}">Agregar al carrito</button>
+                    </div>
+                </div>
+                <div class="img-card">
+                    <img src="{{ url_for('static', filename='images/ropa (4).webp') }}" alt="Ropa 4">
+                    <div class="info-producto">
+                        <p class="descripcion">Ropa edición 4</p>
+                        <p class="precio">$380 MXN</p>
+                        <button class="btn-agregar" data-producto="Ropa edición 4" data-precio="380" data-imagen="{{ url_for('static', filename='images/ropa (4).webp') }}">Agregar al carrito</button>
+                    </div>
+                </div>
+                <div class="img-card">
+                    <img src="{{ url_for('static', filename='images/ropa (5).webp') }}" alt="Ropa 5">
+                    <div class="info-producto">
+                        <p class="descripcion">Ropa edición 5</p>
+                        <p class="precio">$390 MXN</p>
+                        <button class="btn-agregar" data-producto="Ropa edición 5" data-precio="390" data-imagen="{{ url_for('static', filename='images/ropa (5).webp') }}">Agregar al carrito</button>
+                    </div>
+                </div>
+                <div class="img-card">
+                    <img src="{{ url_for('static', filename='images/ropa (6).webp') }}" alt="Ropa 6">
+                    <div class="info-producto">
+                        <p class="descripcion">Ropa edición 6</p>
+                        <p class="precio">$400 MXN</p>
+                        <button class="btn-agregar" data-producto="Ropa edición 6" data-precio="400" data-imagen="{{ url_for('static', filename='images/ropa (6).webp') }}">Agregar al carrito</button>
+                    </div>
+                </div>
+                <div class="img-card">
+                    <img src="{{ url_for('static', filename='images/ropa (7).webp') }}" alt="Ropa 7">
+                    <div class="info-producto">
+                        <p class="descripcion">Ropa edición 7</p>
+                        <p class="precio">$410 MXN</p>
+                        <button class="btn-agregar" data-producto="Ropa edición 7" data-precio="410" data-imagen="{{ url_for('static', filename='images/ropa (7).webp') }}">Agregar al carrito</button>
+                    </div>
+                </div>
+                <div class="img-card">
+                    <img src="{{ url_for('static', filename='images/ropa (8).webp') }}" alt="Ropa 8">
+                    <div class="info-producto">
+                        <p class="descripcion">Ropa edición 8</p>
+                        <p class="precio">$420 MXN</p>
+                        <button class="btn-agregar" data-producto="Ropa edición 8" data-precio="420" data-imagen="{{ url_for('static', filename='images/ropa (8).webp') }}">Agregar al carrito</button>
+                    </div>
+                </div>
+                <div class="img-card">
+                    <img src="{{ url_for('static', filename='images/ropa (9).webp') }}" alt="Ropa 9">
+                    <div class="info-producto">
+                        <p class="descripcion">Ropa edición 9</p>
+                        <p class="precio">$430 MXN</p>
+                        <button class="btn-agregar" data-producto="Ropa edición 9" data-precio="430" data-imagen="{{ url_for('static', filename='images/ropa (9).webp') }}">Agregar al carrito</button>
+                    </div>
+                </div>
+                <div class="img-card">
+                    <img src="{{ url_for('static', filename='images/ropa (10).webp') }}" alt="Ropa 10">
+                    <div class="info-producto">
+                        <p class="descripcion">Ropa edición 10</p>
+                        <p class="precio">$440 MXN</p>
+                        <button class="btn-agregar" data-producto="Ropa edición 10" data-precio="440" data-imagen="{{ url_for('static', filename='images/ropa (10).webp') }}">Agregar al carrito</button>
+                    </div>
+                </div>
+                <div class="img-card">
+                    <img src="{{ url_for('static', filename='images/ropa (11).webp') }}" alt="Ropa 11">
+                    <div class="info-producto">
+                        <p class="descripcion">Ropa edición 11</p>
+                        <p class="precio">$450 MXN</p>
+                        <button class="btn-agregar" data-producto="Ropa edición 11" data-precio="450" data-imagen="{{ url_for('static', filename='images/ropa (11).webp') }}">Agregar al carrito</button>
+                    </div>
+                </div>
+                <div class="img-card">
+                    <img src="{{ url_for('static', filename='images/ropa (12).webp') }}" alt="Ropa 12">
+                    <div class="info-producto">
+                        <p class="descripcion">Ropa edición 12</p>
+                        <p class="precio">$460 MXN</p>
+                        <button class="btn-agregar" data-producto="Ropa edición 12" data-precio="460" data-imagen="{{ url_for('static', filename='images/ropa (12).webp') }}">Agregar al carrito</button>
+                    </div>
+                </div>
+                <div class="img-card">
+                    <img src="{{ url_for('static', filename='images/ropa (13).webp') }}" alt="Ropa 13">
+                    <div class="info-producto">
+                        <p class="descripcion">Ropa edición 13</p>
+                        <p class="precio">$470 MXN</p>
+                        <button class="btn-agregar" data-producto="Ropa edición 13" data-precio="470" data-imagen="{{ url_for('static', filename='images/ropa (13).webp') }}">Agregar al carrito</button>
+                    </div>
+                </div>
+                <div class="img-card">
+                    <img src="{{ url_for('static', filename='images/ropa (14).webp') }}" alt="Ropa 14">
+                    <div class="info-producto">
+                        <p class="descripcion">Ropa edición 14</p>
+                        <p class="precio">$480 MXN</p>
+                        <button class="btn-agregar" data-producto="Ropa edición 14" data-precio="480" data-imagen="{{ url_for('static', filename='images/ropa (14).webp') }}">Agregar al carrito</button>
+                    </div>
+                </div>
+                <div class="img-card">
+                    <img src="{{ url_for('static', filename='images/ropa (15).webp') }}" alt="Ropa 15">
+                    <div class="info-producto">
+                        <p class="descripcion">Ropa edición 15</p>
+                        <p class="precio">$490 MXN</p>
+                        <button class="btn-agregar" data-producto="Ropa edición 15" data-precio="490" data-imagen="{{ url_for('static', filename='images/ropa (15).webp') }}">Agregar al carrito</button>
+                    </div>
+                </div>
+                <div class="img-card">
+                    <img src="{{ url_for('static', filename='images/ropa (16).webp') }}" alt="Ropa 16">
+                    <div class="info-producto">
+                        <p class="descripcion">Ropa edición 16</p>
+                        <p class="precio">$500 MXN</p>
+                        <button class="btn-agregar" data-producto="Ropa edición 16" data-precio="500" data-imagen="{{ url_for('static', filename='images/ropa (16).webp') }}">Agregar al carrito</button>
+                    </div>
+                </div>
+                <div class="img-card">
+                    <img src="{{ url_for('static', filename='images/ropa (17).webp') }}" alt="Ropa 17">
+                    <div class="info-producto">
+                        <p class="descripcion">Ropa edición 17</p>
+                        <p class="precio">$510 MXN</p>
+                        <button class="btn-agregar" data-producto="Ropa edición 17" data-precio="510" data-imagen="{{ url_for('static', filename='images/ropa (17).webp') }}">Agregar al carrito</button>
+                    </div>
+                </div>
+                <div class="img-card">
+                    <img src="{{ url_for('static', filename='images/ropa (18).webp') }}" alt="Ropa 18">
+                    <div class="info-producto">
+                        <p class="descripcion">Ropa edición 18</p>
+                        <p class="precio">$520 MXN</p>
+                        <button class="btn-agregar" data-producto="Ropa edición 18" data-precio="520" data-imagen="{{ url_for('static', filename='images/ropa (18).webp') }}">Agregar al carrito</button>
+                    </div>
+                </div>
+                <div class="img-card">
+                    <img src="{{ url_for('static', filename='images/ropa (19).webp') }}" alt="Ropa 19">
+                    <div class="info-producto">
+                        <p class="descripcion">Ropa edición 19</p>
+                        <p class="precio">$530 MXN</p>
+                        <button class="btn-agregar" data-producto="Ropa edición 19" data-precio="530" data-imagen="{{ url_for('static', filename='images/ropa (19).webp') }}">Agregar al carrito</button>
+                    </div>
+                </div>
+                <div class="img-card">
+                    <img src="{{ url_for('static', filename='images/ropa (20).webp') }}" alt="Ropa 20">
+                    <div class="info-producto">
+                        <p class="descripcion">Ropa edición 20</p>
+                        <p class="precio">$540 MXN</p>
+                        <button class="btn-agregar" data-producto="Ropa edición 20" data-precio="540" data-imagen="{{ url_for('static', filename='images/ropa (20).webp') }}">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="gorras">
+            <h2>Gorras</h2>
+            <div class="galeria-grid">
+                <div class="img-card">
+                    <img src="{{ url_for('static', filename='images/gorras (1).webp') }}" alt="Gorra 1">
+                    <div class="info-producto">
+                        <p class="descripcion">Gorra edición 1</p>
+                        <p class="precio">$150 MXN</p>
+                        <button class="btn-agregar" data-producto="Gorra edición 1" data-precio="150" data-imagen="{{ url_for('static', filename='images/gorras (1).webp') }}">Agregar al carrito</button>
+                    </div>
+                </div>
+                <div class="img-card">
+                    <img src="{{ url_for('static', filename='images/gorras (2).webp') }}" alt="Gorra 2">
+                    <div class="info-producto">
+                        <p class="descripcion">Gorra edición 2</p>
+                        <p class="precio">$160 MXN</p>
+                        <button class="btn-agregar" data-producto="Gorra edición 2" data-precio="160" data-imagen="{{ url_for('static', filename='images/gorras (2).webp') }}">Agregar al carrito</button>
+                    </div>
+                </div>
+                <div class="img-card">
+                    <img src="{{ url_for('static', filename='images/gorras (3).webp') }}" alt="Gorra 3">
+                    <div class="info-producto">
+                        <p class="descripcion">Gorra edición 3</p>
+                        <p class="precio">$170 MXN</p>
+                        <button class="btn-agregar" data-producto="Gorra edición 3" data-precio="170" data-imagen="{{ url_for('static', filename='images/gorras (3).webp') }}">Agregar al carrito</button>
+                    </div>
+                </div>
+                <div class="img-card">
+                    <img src="{{ url_for('static', filename='images/gorras (4).webp') }}" alt="Gorra 4">
+                    <div class="info-producto">
+                        <p class="descripcion">Gorra edición 4</p>
+                        <p class="precio">$180 MXN</p>
+                        <button class="btn-agregar" data-producto="Gorra edición 4" data-precio="180" data-imagen="{{ url_for('static', filename='images/gorras (4).webp') }}">Agregar al carrito</button>
+                    </div>
+                </div>
+                <div class="img-card">
+                    <img src="{{ url_for('static', filename='images/gorras (5).png') }}" alt="Gorra 5">
+                    <div class="info-producto">
+                        <p class="descripcion">Gorra edición 5</p>
+                        <p class="precio">$190 MXN</p>
+                        <button class="btn-agregar" data-producto="Gorra edición 5" data-precio="190" data-imagen="{{ url_for('static', filename='images/gorras (5).png') }}">Agregar al carrito</button>
+                    </div>
+                </div>
+                <div class="img-card">
+                    <img src="{{ url_for('static', filename='images/gorras (6).webp') }}" alt="Gorra 6">
+                    <div class="info-producto">
+                        <p class="descripcion">Gorra edición 6</p>
+                        <p class="precio">$200 MXN</p>
+                        <button class="btn-agregar" data-producto="Gorra edición 6" data-precio="200" data-imagen="{{ url_for('static', filename='images/gorras (6).webp') }}">Agregar al carrito</button>
+                    </div>
+                </div>
+                <div class="img-card">
+                    <img src="{{ url_for('static', filename='images/gorras (7).webp') }}" alt="Gorra 7">
+                    <div class="info-producto">
+                        <p class="descripcion">Gorra edición 7</p>
+                        <p class="precio">$210 MXN</p>
+                        <button class="btn-agregar" data-producto="Gorra edición 7" data-precio="210" data-imagen="{{ url_for('static', filename='images/gorras (7).webp') }}">Agregar al carrito</button>
+                    </div>
+                </div>
+                <div class="img-card">
+                    <img src="{{ url_for('static', filename='images/gorras (8).webp') }}" alt="Gorra 8">
+                    <div class="info-producto">
+                        <p class="descripcion">Gorra edición 8</p>
+                        <p class="precio">$220 MXN</p>
+                        <button class="btn-agregar" data-producto="Gorra edición 8" data-precio="220" data-imagen="{{ url_for('static', filename='images/gorras (8).webp') }}">Agregar al carrito</button>
+                    </div>
+                </div>
+                <div class="img-card">
+                    <img src="{{ url_for('static', filename='images/gorras (9).webp') }}" alt="Gorra 9">
+                    <div class="info-producto">
+                        <p class="descripcion">Gorra edición 9</p>
+                        <p class="precio">$230 MXN</p>
+                        <button class="btn-agregar" data-producto="Gorra edición 9" data-precio="230" data-imagen="{{ url_for('static', filename='images/gorras (9).webp') }}">Agregar al carrito</button>
+                    </div>
+                </div>
+                <div class="img-card">
+                    <img src="{{ url_for('static', filename='images/gorras (10).webp') }}" alt="Gorra 10">
+                    <div class="info-producto">
+                        <p class="descripcion">Gorra edición 10</p>
+                        <p class="precio">$240 MXN</p>
+                        <button class="btn-agregar" data-producto="Gorra edición 10" data-precio="240" data-imagen="{{ url_for('static', filename='images/gorras (10).webp') }}">Agregar al carrito</button>
+                    </div>
+                </div>
+                <div class="img-card">
+                    <img src="{{ url_for('static', filename='images/gorras (11).webp') }}" alt="Gorra 11">
+                    <div class="info-producto">
+                        <p class="descripcion">Gorra edición 11</p>
+                        <p class="precio">$250 MXN</p>
+                        <button class="btn-agregar" data-producto="Gorra edición 11" data-precio="250" data-imagen="{{ url_for('static', filename='images/gorras (11).webp') }}">Agregar al carrito</button>
+                    </div>
+                </div>
+                <div class="img-card">
+                    <img src="{{ url_for('static', filename='images/gorras (12).webp') }}" alt="Gorra 12">
+                    <div class="info-producto">
+                        <p class="descripcion">Gorra edición 12</p>
+                        <p class="precio">$260 MXN</p>
+                        <button class="btn-agregar" data-producto="Gorra edición 12" data-precio="260" data-imagen="{{ url_for('static', filename='images/gorras (12).webp') }}">Agregar al carrito</button>
+                    </div>
+                </div>
+                <div class="img-card">
+                    <img src="{{ url_for('static', filename='images/gorras (13).webp') }}" alt="Gorra 13">
+                    <div class="info-producto">
+                        <p class="descripcion">Gorra edición 13</p>
+                        <p class="precio">$270 MXN</p>
+                        <button class="btn-agregar" data-producto="Gorra edición 13" data-precio="270" data-imagen="{{ url_for('static', filename='images/gorras (13).webp') }}">Agregar al carrito</button>
+                    </div>
+                </div>
+                <div class="img-card">
+                    <img src="{{ url_for('static', filename='images/gorras (14).webp') }}" alt="Gorra 14">
+                    <div class="info-producto">
+                        <p class="descripcion">Gorra edición 14</p>
+                        <p class="precio">$280 MXN</p>
+                        <button class="btn-agregar" data-producto="Gorra edición 14" data-precio="280" data-imagen="{{ url_for('static', filename='images/gorras (14).webp') }}">Agregar al carrito</button>
+                    </div>
+                </div>
+                <div class="img-card">
+                    <img src="{{ url_for('static', filename='images/gorras (15).webp') }}" alt="Gorra 15">
+                    <div class="info-producto">
+                        <p class="descripcion">Gorra edición 15</p>
+                        <p class="precio">$290 MXN</p>
+                        <button class="btn-agregar" data-producto="Gorra edición 15" data-precio="290" data-imagen="{{ url_for('static', filename='images/gorras (15).webp') }}">Agregar al carrito</button>
+                    </div>
+                </div>
+                <div class="img-card">
+                    <img src="{{ url_for('static', filename='images/gorras (16).webp') }}" alt="Gorra 16">
+                    <div class="info-producto">
+                        <p class="descripcion">Gorra edición 16</p>
+                        <p class="precio">$300 MXN</p>
+                        <button class="btn-agregar" data-producto="Gorra edición 16" data-precio="300" data-imagen="{{ url_for('static', filename='images/gorras (16).webp') }}">Agregar al carrito</button>
+                    </div>
+                </div>
+                <div class="img-card">
+                    <img src="{{ url_for('static', filename='images/gorras (17).webp') }}" alt="Gorra 17">
+                    <div class="info-producto">
+                        <p class="descripcion">Gorra edición 17</p>
+                        <p class="precio">$310 MXN</p>
+                        <button class="btn-agregar" data-producto="Gorra edición 17" data-precio="310" data-imagen="{{ url_for('static', filename='images/gorras (17).webp') }}">Agregar al carrito</button>
+                    </div>
+                </div>
+                <div class="img-card">
+                    <img src="{{ url_for('static', filename='images/gorras (18).webp') }}" alt="Gorra 18">
+                    <div class="info-producto">
+                        <p class="descripcion">Gorra edición 18</p>
+                        <p class="precio">$320 MXN</p>
+                        <button class="btn-agregar" data-producto="Gorra edición 18" data-precio="320" data-imagen="{{ url_for('static', filename='images/gorras (18).webp') }}">Agregar al carrito</button>
+                    </div>
+                </div>
+                <div class="img-card">
+                    <img src="{{ url_for('static', filename='images/gorras (13).webp') }}" alt="Gorra 19">
+                    <div class="info-producto">
+                        <p class="descripcion">Gorra edición 19</p>
+                        <p class="precio">$330 MXN</p>
+                        <button class="btn-agregar" data-producto="Gorra edición 19" data-precio="330" data-imagen="{{ url_for('static', filename='images/gorras (13).webp') }}">Agregar al carrito</button>
+                    </div>
+                </div>
+                <div class="img-card">
+                    <img src="{{ url_for('static', filename='images/gorras (10).webp') }}" alt="Gorra 20">
+                    <div class="info-producto">
+                        <p class="descripcion">Gorra edición 20</p>
+                        <p class="precio">$340 MXN</p>
+                        <button class="btn-agregar" data-producto="Gorra edición 20" data-precio="340" data-imagen="{{ url_for('static', filename='images/gorras (10).webp') }}">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="perfumes">
+            <h2>Perfumes</h2>
+            <div class="galeria-grid">
+                <div class="img-card">
+                    <img src="{{ url_for('static', filename='images/perfume1.webp') }}" alt="Perfume 1">
+                    <div class="info-producto">
+                        <p class="descripcion">Perfume aroma 1</p>
+                        <p class="precio">$314 MXN</p>
+                        <button class="btn-agregar" data-producto="Perfume aroma 1" data-precio="314" data-imagen="{{ url_for('static', filename='images/perfume1.webp') }}">Agregar al carrito</button>
+                    </div>
+                </div>
+                <div class="img-card">
+                    <img src="{{ url_for('static', filename='images/perfume2.webp') }}" alt="Perfume 2">
+                    <div class="info-producto">
+                        <p class="descripcion">Perfume aroma 2</p>
+                        <p class="precio">$329 MXN</p>
+                        <button class="btn-agregar" data-producto="Perfume aroma 2" data-precio="329" data-imagen="{{ url_for('static', filename='images/perfume2.webp') }}">Agregar al carrito</button>
+                    </div>
+                </div>
+                <div class="img-card">
+                    <img src="{{ url_for('static', filename='images/perfume3.webp') }}" alt="Perfume 3">
+                    <div class="info-producto">
+                        <p class="descripcion">Perfume aroma 3</p>
+                        <p class="precio">$344 MXN</p>
+                        <button class="btn-agregar" data-producto="Perfume aroma 3" data-precio="344" data-imagen="{{ url_for('static', filename='images/perfume3.webp') }}">Agregar al carrito</button>
+                    </div>
+                </div>
+                <div class="img-card">
+                    <img src="{{ url_for('static', filename='images/perfume4.webp') }}" alt="Perfume 4">
+                    <div class="info-producto">
+                        <p class="descripcion">Perfume aroma 4</p>
+                        <p class="precio">$359 MXN</p>
+                        <button class="btn-agregar" data-producto="Perfume aroma 4" data-precio="359" data-imagen="{{ url_for('static', filename='images/perfume4.webp') }}">Agregar al carrito</button>
+                    </div>
+                </div>
+                <div class="img-card">
+                    <img src="{{ url_for('static', filename='images/perfume5.webp') }}" alt="Perfume 5">
+                    <div class="info-producto">
+                        <p class="descripcion">Perfume aroma 5</p>
+                        <p class="precio">$374 MXN</p>
+                        <button class="btn-agregar" data-producto="Perfume aroma 5" data-precio="374" data-imagen="{{ url_for('static', filename='images/perfume5.webp') }}">Agregar al carrito</button>
+                    </div>
+                </div>
+                <div class="img-card">
+                    <img src="{{ url_for('static', filename='images/perfume6.webp') }}" alt="Perfume 6">
+                    <div class="info-producto">
+                        <p class="descripcion">Perfume aroma 6</p>
+                        <p class="precio">$389 MXN</p>
+                        <button class="btn-agregar" data-producto="Perfume aroma 6" data-precio="389" data-imagen="{{ url_for('static', filename='images/perfume6.webp') }}">Agregar al carrito</button>
+                    </div>
+                </div>
+                <div class="img-card">
+                    <img src="{{ url_for('static', filename='images/perfume7.webp') }}" alt="Perfume 7">
+                    <div class="info-producto">
+                        <p class="descripcion">Perfume aroma 7</p>
+                        <p class="precio">$404 MXN</p>
+                        <button class="btn-agregar" data-producto="Perfume aroma 7" data-precio="404" data-imagen="{{ url_for('static', filename='images/perfume7.webp') }}">Agregar al carrito</button>
+                    </div>
+                </div>
+                <div class="img-card">
+                    <img src="{{ url_for('static', filename='images/perfume8.webp') }}" alt="Perfume 8">
+                    <div class="info-producto">
+                        <p class="descripcion">Perfume aroma 8</p>
+                        <p class="precio">$419 MXN</p>
+                        <button class="btn-agregar" data-producto="Perfume aroma 8" data-precio="419" data-imagen="{{ url_for('static', filename='images/perfume8.webp') }}">Agregar al carrito</button>
+                    </div>
+                </div>
+                <div class="img-card">
+                    <img src="{{ url_for('static', filename='images/perfume9.webp') }}" alt="Perfume 9">
+                    <div class="info-producto">
+                        <p class="descripcion">Perfume aroma 9</p>
+                        <p class="precio">$434 MXN</p>
+                        <button class="btn-agregar" data-producto="Perfume aroma 9" data-precio="434" data-imagen="{{ url_for('static', filename='images/perfume9.webp') }}">Agregar al carrito</button>
+                    </div>
+                </div>
+                <div class="img-card">
+                    <img src="{{ url_for('static', filename='images/perfume10.webp') }}" alt="Perfume 10">
+                    <div class="info-producto">
+                        <p class="descripcion">Perfume aroma 10</p>
+                        <p class="precio">$449 MXN</p>
+                        <button class="btn-agregar" data-producto="Perfume aroma 10" data-precio="449" data-imagen="{{ url_for('static', filename='images/perfume10.webp') }}">Agregar al carrito</button>
+                    </div>
+                </div>
+                <div class="img-card">
+                    <img src="{{ url_for('static', filename='images/perfume11.webp') }}" alt="Perfume 11">
+                    <div class="info-producto">
+                        <p class="descripcion">Perfume aroma 11</p>
+                        <p class="precio">$464 MXN</p>
+                        <button class="btn-agregar" data-producto="Perfume aroma 11" data-precio="464" data-imagen="{{ url_for('static', filename='images/perfume11.webp') }}">Agregar al carrito</button>
+                    </div>
+                </div>
+                <div class="img-card">
+                    <img src="{{ url_for('static', filename='images/perfume12.webp') }}" alt="Perfume 12">
+                    <div class="info-producto">
+                        <p class="descripcion">Perfume aroma 12</p>
+                        <p class="precio">$479 MXN</p>
+                        <button class="btn-agregar" data-producto="Perfume aroma 12" data-precio="479" data-imagen="{{ url_for('static', filename='images/perfume12.webp') }}">Agregar al carrito</button>
+                    </div>
+                </div>
+                <div class="img-card">
+                    <img src="{{ url_for('static', filename='images/perfume13.webp') }}" alt="Perfume 13">
+                    <div class="info-producto">
+                        <p class="descripcion">Perfume aroma 13</p>
+                        <p class="precio">$494 MXN</p>
+                        <button class="btn-agregar" data-producto="Perfume aroma 13" data-precio="494" data-imagen="{{ url_for('static', filename='images/perfume13.webp') }}">Agregar al carrito</button>
+                    </div>
+                </div>
+                <div class="img-card">
+                    <img src="{{ url_for('static', filename='images/perfume14.webp') }}" alt="Perfume 14">
+                    <div class="info-producto">
+                        <p class="descripcion">Perfume aroma 14</p>
+                        <p class="precio">$509 MXN</p>
+                        <button class="btn-agregar" data-producto="Perfume aroma 14" data-precio="509" data-imagen="{{ url_for('static', filename='images/perfume14.webp') }}">Agregar al carrito</button>
+                    </div>
+                </div>
+                <div class="img-card">
+                    <img src="{{ url_for('static', filename='images/perfume15.webp') }}" alt="Perfume 15">
+                    <div class="info-producto">
+                        <p class="descripcion">Perfume aroma 15</p>
+                        <p class="precio">$524 MXN</p>
+                        <button class="btn-agregar" data-producto="Perfume aroma 15" data-precio="524" data-imagen="{{ url_for('static', filename='images/perfume15.webp') }}">Agregar al carrito</button>
+                    </div>
+                </div>
+                <div class="img-card">
+                    <img src="{{ url_for('static', filename='images/perfume16.webp') }}" alt="Perfume 16">
+                    <div class="info-producto">
+                        <p class="descripcion">Perfume aroma 16</p>
+                        <p class="precio">$539 MXN</p>
+                        <button class="btn-agregar" data-producto="Perfume aroma 16" data-precio="539" data-imagen="{{ url_for('static', filename='images/perfume16.webp') }}">Agregar al carrito</button>
+                    </div>
+                </div>
+                <div class="img-card">
+                    <img src="{{ url_for('static', filename='images/perfume17.webp') }}" alt="Perfume 17">
+                    <div class="info-producto">
+                        <p class="descripcion">Perfume aroma 17</p>
+                        <p class="precio">$554 MXN</p>
+                        <button class="btn-agregar" data-producto="Perfume aroma 17" data-precio="554" data-imagen="{{ url_for('static', filename='images/perfume17.webp') }}">Agregar al carrito</button>
+                    </div>
+                </div>
+                <div class="img-card">
+                    <img src="{{ url_for('static', filename='images/perfume18.webp') }}" alt="Perfume 18">
+                    <div class="info-producto">
+                        <p class="descripcion">Perfume aroma 18</p>
+                        <p class="precio">$569 MXN</p>
+                        <button class="btn-agregar" data-producto="Perfume aroma 18" data-precio="569" data-imagen="{{ url_for('static', filename='images/perfume18.webp') }}">Agregar al carrito</button>
+                    </div>
+                </div>
+                <div class="img-card">
+                    <img src="{{ url_for('static', filename='images/perfume19.webp') }}" alt="Perfume 19">
+                    <div class="info-producto">
+                        <p class="descripcion">Perfume aroma 19</p>
+                        <p class="precio">$584 MXN</p>
+                        <button class="btn-agregar" data-producto="Perfume aroma 19" data-precio="584" data-imagen="{{ url_for('static', filename='images/perfume19.webp') }}">Agregar al carrito</button>
+                    </div>
+                </div>
+                <div class="img-card">
+                    <img src="{{ url_for('static', filename='images/perfume20.webp') }}" alt="Perfume 20">
+                    <div class="info-producto">
+                        <p class="descripcion">Perfume aroma 20</p>
+                        <p class="precio">$599 MXN</p>
+                        <button class="btn-agregar" data-producto="Perfume aroma 20" data-precio="599" data-imagen="{{ url_for('static', filename='images/perfume20.webp') }}">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tenis">
+            <h2>Tenis</h2>
+            <div class="galeria-grid">
+                <div class="img-card">
+                    <img src="{{ url_for('static', filename='images/tenis1.webp') }}" alt="Tenis 1">
+                    <div class="info-producto">
+                        <p class="descripcion">Tenis edición 1</p>
+                        <p class="precio">$419 MXN</p>
+                        <button class="btn-agregar" data-producto="Tenis edición 1" data-precio="419" data-imagen="{{ url_for('static', filename='images/tenis1.webp') }}">Agregar al carrito</button>
+                    </div>
+                </div>
+                <div class="img-card">
+                    <img src="{{ url_for('static', filename='images/tenis2.webp') }}" alt="Tenis 2">
+                    <div class="info-producto">
+                        <p class="descripcion">Tenis edición 2</p>
+                        <p class="precio">$429 MXN</p>
+                        <button class="btn-agregar" data-producto="Tenis edición 2" data-precio="429" data-imagen="{{ url_for('static', filename='images/tenis2.webp') }}">Agregar al carrito</button>
+                    </div>
+                </div>
+                <div class="img-card">
+                    <img src="{{ url_for('static', filename='images/tenis3.webp') }}" alt="Tenis 3">
+                    <div class="info-producto">
+                        <p class="descripcion">Tenis edición 3</p>
+                        <p class="precio">$439 MXN</p>
+                        <button class="btn-agregar" data-producto="Tenis edición 3" data-precio="439" data-imagen="{{ url_for('static', filename='images/tenis3.webp') }}">Agregar al carrito</button>
+                    </div>
+                </div>
+                <div class="img-card">
+                    <img src="{{ url_for('static', filename='images/tenis4.webp') }}" alt="Tenis 4">
+                    <div class="info-producto">
+                        <p class="descripcion">Tenis edición 4</p>
+                        <p class="precio">$449 MXN</p>
+                        <button class="btn-agregar" data-producto="Tenis edición 4" data-precio="449" data-imagen="{{ url_for('static', filename='images/tenis4.webp') }}">Agregar al carrito</button>
+                    </div>
+                </div>
+                <div class="img-card">
+                    <img src="{{ url_for('static', filename='images/tenis5.webp') }}" alt="Tenis 5">
+                    <div class="info-producto">
+                        <p class="descripcion">Tenis edición 5</p>
+                        <p class="precio">$459 MXN</p>
+                        <button class="btn-agregar" data-producto="Tenis edición 5" data-precio="459" data-imagen="{{ url_for('static', filename='images/tenis5.webp') }}">Agregar al carrito</button>
+                    </div>
+                </div>
+                <div class="img-card">
+                    <img src="{{ url_for('static', filename='images/tenis6.webp') }}" alt="Tenis 6">
+                    <div class="info-producto">
+                        <p class="descripcion">Tenis edición 6</p>
+                        <p class="precio">$469 MXN</p>
+                        <button class="btn-agregar" data-producto="Tenis edición 6" data-precio="469" data-imagen="{{ url_for('static', filename='images/tenis6.webp') }}">Agregar al carrito</button>
+                    </div>
+                </div>
+                <div class="img-card">
+                    <img src="{{ url_for('static', filename='images/tenis7.webp') }}" alt="Tenis 7">
+                    <div class="info-producto">
+                        <p class="descripcion">Tenis edición 7</p>
+                        <p class="precio">$479 MXN</p>
+                        <button class="btn-agregar" data-producto="Tenis edición 7" data-precio="479" data-imagen="{{ url_for('static', filename='images/tenis7.webp') }}">Agregar al carrito</button>
+                    </div>
+                </div>
+                <div class="img-card">
+                    <img src="{{ url_for('static', filename='images/tenis8.webp') }}" alt="Tenis 8">
+                    <div class="info-producto">
+                        <p class="descripcion">Tenis edición 8</p>
+                        <p class="precio">$489 MXN</p>
+                        <button class="btn-agregar" data-producto="Tenis edición 8" data-precio="489" data-imagen="{{ url_for('static', filename='images/tenis8.webp') }}">Agregar al carrito</button>
+                    </div>
+                </div>
+                <div class="img-card">
+                    <img src="{{ url_for('static', filename='images/tenis9.webp') }}" alt="Tenis 9">
+                    <div class="info-producto">
+                        <p class="descripcion">Tenis edición 9</p>
+                        <p class="precio">$499 MXN</p>
+                        <button class="btn-agregar" data-producto="Tenis edición 9" data-precio="499" data-imagen="{{ url_for('static', filename='images/tenis9.webp') }}">Agregar al carrito</button>
+                    </div>
+                </div>
+                <div class="img-card">
+                    <img src="{{ url_for('static', filename='images/tenis10.webp') }}" alt="Tenis 10">
+                    <div class="info-producto">
+                        <p class="descripcion">Tenis edición 10</p>
+                        <p class="precio">$509 MXN</p>
+                        <button class="btn-agregar" data-producto="Tenis edición 10" data-precio="509" data-imagen="{{ url_for('static', filename='images/tenis10.webp') }}">Agregar al carrito</button>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+    </main>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    // Menú hamburguesa responsive
+    const menuToggle = document.getElementById('menu-toggle');
+    const menuCategorias = document.getElementById('menu-categorias');
+
+    if (menuToggle && menuCategorias) {
+        menuToggle.addEventListener('click', () => {
+            menuCategorias.classList.toggle('mostrar');
+        });
+
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 700) {
+                menuCategorias.classList.remove('mostrar');
+                menuCategorias.style.display = 'flex';
+            } else {
+                menuCategorias.style.display = '';
+            }
+        });
+    }
+
+    // Agregar al carrito y mostrar toast
+    const botonesAgregar = document.querySelectorAll('.btn-agregar');
+    if (botonesAgregar.length > 0) {
+        botonesAgregar.forEach(boton => {
+            boton.addEventListener('click', () => {
+                const nombre = boton.getAttribute('data-producto') || 'Producto';
+                const precio = parseFloat(boton.getAttribute('data-precio')) || 0;
+                const imagen = boton.getAttribute('data-imagen') || '';
+
+                const producto = { nombre, precio, imagen };
+                const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+                carrito.push(producto);
+                localStorage.setItem('carrito', JSON.stringify(carrito));
+
+                mostrarToast(`"${nombre}" se agregó al carrito.`);
+            });
+        });
+    }
+});
+
+// Función toast
+function mostrarToast(mensaje) {
+    const toast = document.getElementById('toast');
+    if (toast) {
+        toast.textContent = mensaje;
+        toast.classList.add('show');
+        setTimeout(() => {
+            toast.classList.remove('show');
+        }, 1800);
+    } else {
+        console.warn('Elemento #toast no encontrado');
+    }
+}
+</script>
+
+
+    <div id="toast" class="toast"></div>
+</body>
+</html>

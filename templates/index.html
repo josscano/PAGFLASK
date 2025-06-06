@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style & Essence - Ropa y Estilo</title>
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/logitooo.png') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+{% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <div class="flashes" id="flash-messages">
+          {% for message in messages %}
+            <div class="flash">{{ message }}</div>
+          {% endfor %}
+        </div>
+      {% endif %}
+    {% endwith %}
+    <section class="hero">
+        <nav class="nav-bar container">
+            <img src="{{ url_for('static', filename='images/logitooo.png') }}" alt="Style & Essence" class="logo">
+            <ul>
+                <li><a href="#coleccion">Colección</a></li>
+                <li><a href="#experiencia">Experiencia</a></li>
+                <li><a href="{{ url_for('pedidos') }}">Compra Ya</a></li>
+                <li><a href="{{ url_for('home') }}">REGRESAR</a></li>
+
+
+            </ul>
+            <a href="#pedidos" class="cta-btn">¡Compra Ahora!</a>
+        </nav>
+        <div class="hero-content container">
+            <div class="hero-text">
+                <h1>Bienvenido a <span>Style & Essence</span></h1>
+                <p>Explora lo mejor en ropa urbana, gorras, perfumes únicos y tenis de moda.<br>
+                Elige tu estilo, deja tu esencia.</p>
+                <a href="#coleccion" class="btn">Explora la colección</a>
+            </div>
+            <div class="hero-img">
+                <img src="{{ url_for('static', filename='images/gorra.png') }}" alt="Moda Urbana">
+            </div>
+        </div>
+    </section>
+
+    <section id="coleccion" class="sabores-section container">
+        <h2>Colección Destacada</h2>
+        <div class="sabores-grid">
+            <div class="sabor-card">
+                <img src="{{ url_for('static', filename='images/gorras (10).webp') }}" alt="Ropa Street Style">
+                <h3>Dandy Street Style</h3>
+                <p>Conjuntos urbanos con actitud, ideales para destacar.</p>
+                <span class="precio">2800</span>
+            </div>
+            <div class="sabor-card">
+                <img src="{{ url_for('static', filename='images/gorras (12).webp') }}" alt="Gorra Snapback">
+                <h3>Dandy mago</h3>
+                <p>Diseño clásico con toques modernos. Combina con todo.</p>
+                <span class="precio">$2500</span>
+                
+            </div>
+            <div class="sabor-card">
+                <img src="{{ url_for('static', filename='images/perfume1.webp') }}" alt="Perfume Rebel">
+                <h3>ACQUA DI GIO</h3>
+                <p>Aroma audaz y envolvente que te hará inolvidable.</p>
+                <span class="precio">$1,250</span>
+            </div>
+            <div class="sabor-card">
+                <img src="{{ url_for('static', filename='images/tenis20.webp') }}" alt="Tenis FlexRun">
+                <h3>YEEZY ZEBRA</h3>
+                <p>Comodidad y estilo para tus pasos diarios.</p>
+                <span class="precio">$1,400</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="experiencia" class="experiencia-section">
+        <div class="container experiencia-flex">
+            <div class="exp-img">
+                <img src="{{ url_for('static', filename='images/gorra142.png') }}" alt="Experiencia Style & Essence">
+            </div>
+            <div class="exp-text">
+                <h2>La Experiencia Style & Essence</h2>
+                <ul>
+                    <li>Moda versátil para cualquier ocasión.</li>
+                    <li>Gorras y perfumes únicos que te representan.</li>
+                    <li>Tenis para combinar estilo y confort.</li>
+                    <li>¡Encuentra tu identidad en cada detalle!</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="galeria" class="galeria-section container">
+        <h2>Galería</h2>
+        <div class="galeria-mosaico">
+            <img src="{{ url_for('static', filename='images/perfume7.webp') }}" alt="Galería Ropa">
+            <img src="{{ url_for('static', filename='images/gorras (14).webp') }}" alt="Galería Gorra">
+            <img src="{{ url_for('static', filename='images/tenis4.webp') }}" alt="Galería Perfume">
+            <img src="{{ url_for('static', filename='images/tenis6.webp') }}" alt="Galería Tenis">
+        </div>
+    </section>
+
+
+ <section id="colaboraciones" class="colaboraciones-section container">
+    <h2>Colaboraciones y Marcas Aliadas</h2>
+    <div class="colaboraciones-grid">
+        <div class="colaboracion-card">
+            <a href="https://dandyhats.com" target="_blank">
+                <img src="{{ url_for('static', filename='images/marca1.png') }}" alt="Marca 1">
+            </a>
+            <h3>DANDY HATS</h3>
+            <p>"Una buena gorra dice más que mil palabras."</p>
+        </div>
+        <div class="colaboracion-card">
+            <a href="https://www.neweracap.com.mx/" target="_blank">
+                <img src="{{ url_for('static', filename='images/new.png') }}" alt="Marca 2">
+            </a>
+            <h3>NEW ERA </h3>
+            <p>"Cada gorra cuenta una historia. ¿Cuál es la tuya?"</p>
+        </div>
+        <div class="colaboracion-card">
+            <a href="https://www.instagram.com/tirocaps/" target="_blank">
+                <img src="{{ url_for('static', filename='images/marca3.png') }}" alt="Marca 3">
+            </a>
+            <h3>TIRO CAPS</h3>
+            <p>"Directo al estilo, sin fallar el tiro."</p>
+        </div>
+    </div>
+</section>
+
+
+ <section id="pedidos" class="pedido-section container">
+    <h2>Información para el envío</h2>
+    <form class="pedido-form" method="POST" action="/pedidos">
+        <div class="form-row">
+            <input type="text" name="nombre" placeholder="Nombre(s)" required>
+            <input type="text" name="apellidos" placeholder="Apellidos" required>
+        </div>
+        <div class="form-row">
+            <input type="text" name="direccion" placeholder="Dirección (calle y número)" required>
+        </div>
+        <div class="form-row">
+            <input type="text" name="distrito" placeholder="Distrito / Colonia" required>
+        </div>
+        <div class="form-row">
+            <input type="text" name="ciudad" placeholder="Ciudad / Cantón" required>
+            <input type="text" name="estado" placeholder="Estado / Provincia" required>
+        </div>
+        <div class="form-row">
+            <input type="text" name="cp" placeholder="Código Postal" required>
+        </div>
+        <div class="form-row">
+            <input type="tel" name="telefono" placeholder="Número de teléfono" required pattern="[0-9]{10,}">
+        </div>
+        <div class="form-row">
+            <input type="email" name="email" placeholder="Correo electrónico" required>
+        </div>
+        <div class="form-row">
+            <select name="producto" required>
+                <option value="">Elige tu producto</option>
+                <option>Street Style</option>
+                <option>Gorra Snapback</option>
+                <option>Perfume Rebel</option>
+                <option>Tenis FlexRun</option>
+            </select>
+            <input type="number" name="cantidad" min="1" value="1" required>
+        </div>
+        <textarea name="instrucciones" placeholder="¿Instrucciones especiales?"></textarea>
+        <button type="submit" class="btn">¡Comprar ahora!</button>
+    </form>
+</section>
+
+    <section id="envio" class="envio-section container">
+    <h2>Información de Envío</h2>
+    <div class="envio-info">
+        <ul>
+            <li><strong>Tiempo de entrega:</strong> De 3 a 7 días hábiles en toda la República Mexicana.</li>
+            <li><strong>Empaque seguro:</strong> Todos los productos se envían perfectamente protegidos para garantizar su llegada en óptimas condiciones.</li>
+            <li><strong>Rastreo:</strong> Recibirás un número de guía para rastrear tu pedido en cuanto sea enviado.</li>
+            <li><strong>Costo de envío:</strong> Envío gratis en compras mayores a $3000 MXN. Para compras menores, el costo es de $299 MXN.</li>
+            <li><strong>Devoluciones:</strong> Puedes solicitar cambios o devoluciones hasta 15 días después de recibir tu pedido.</li>
+            <li><strong>Atención al cliente:</strong> Si tienes dudas sobre tu envío, contáctanos a través de nuestro correo electrónico o WhatsApp.</li>
+        </ul>
+        <p class="envio-aviso">
+            <strong>Nota:</strong> Los tiempos de entrega pueden variar en temporadas altas o por causas ajenas a la empresa de paquetería.
+        </p>
+    </div>
+</section>
+<section id="contacto" class="contacto-section container">
+    <h2>Contacto</h2>
+    <div class="contacto-info">
+        <p><strong>Correo electrónico:</strong> contacto@styleessence.com</p>
+        <p><strong>WhatsApp:</strong> +52 55 1234 5678</p>
+    </div>
+</section>
+
+    <footer class="footer">
+        <div class="container footer-flex">
+            <div>
+                <img src="{{ url_for('static', filename='images/logitooo.png') }}" alt="Logo" class="footer-logo">
+                <p>&copy; 2025 Style & Essence. Tu estilo, tu esencia.</p>
+            </div>
+            <div class="footer-socials">
+                <a href="https://www.facebook.com"><img src="{{ url_for('static', filename='images/s1.svg') }}" alt=""></a>
+                <a href="#"><img src="{{ url_for('static', filename='images/s2.svg') }}" alt=""></a>
+                <a href="#"><img src="{{ url_for('static', filename='images/s3.svg') }}" alt=""></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script>
+          setTimeout(function() {
+        var flashes = document.getElementById('flash-messages');
+        if(flashes) { flashes.style.display = 'none'; }
+      }, 3000);
+        var swiper = new Swiper('.testimonios-swiper', {
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        });
+    </script>
+</body>
+</html>
